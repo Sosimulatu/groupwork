@@ -107,7 +107,7 @@ public class AirplaneFX extends Application {
         primaryStage.setScene(new Scene(scrollPane, 400, 400));
     }
 
-Redi, [5/19/2025 9:45 AM]
+
 private void handleAdminChoice(String choice) {
         switch (choice) {
             case "Add Hostess":
@@ -148,7 +148,7 @@ private void handleAdminChoice(String choice) {
         primaryStage.setScene(new Scene(layout, 300, 200));
     }
 
-    // Plane Management Methods
+    
     private void addPlane() {
         GridPane grid = new GridPane();
         grid.setVgap(10);
@@ -459,7 +459,7 @@ static void viewProfile(Stage owner) {
         }
     }
 
-Redi, [5/19/2025 10:02 AM]
+
 private void hostessMenu(ActionEvent e) {
         String password = JOptionPane.showInputDialog(this, "Welcome, Enter Your Password:");
         if (!HOSTESS_PASSWORD.equals(password)) {
@@ -537,7 +537,7 @@ private void hostessMenu(ActionEvent e) {
         String sql = "SELECT * FROM planes";
         StringBuilder sb = new StringBuilder();
 
-Redi, [5/19/2025 10:02 AM]
+
 try (Connection conn = DriverManager.getConnection(DB_URL);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -609,7 +609,7 @@ try (Connection conn = DriverManager.getConnection(DB_URL);
             
             String sql = "DELETE FROM hostesses WHERE id = ?";
 
-Redi, [5/19/2025 10:02 AM]
+
 try (Connection conn = DriverManager.getConnection(DB_URL);
                  PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 
@@ -694,7 +694,7 @@ try (Connection conn = DriverManager.getConnection(DB_URL);
     }
 }
 
-Redi, [5/19/2025 5:04 PM]
+
 case 5: // Base 10 Logarithm
                     System.out.print("Enter positive number: ");
                     num = scanner.nextDouble();
