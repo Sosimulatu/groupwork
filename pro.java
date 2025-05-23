@@ -107,7 +107,6 @@ public class AirplaneFX extends Application {
         primaryStage.setScene(new Scene(scrollPane, 400, 400));
     }
 
-Redi, [5/19/2025 9:45 AM]
 private void handleAdminChoice(String choice) {
         switch (choice) {
             case "Add Hostess":
@@ -148,7 +147,6 @@ private void handleAdminChoice(String choice) {
         primaryStage.setScene(new Scene(layout, 300, 200));
     }
 
-    // Plane Management Methods
     private void addPlane() {
         GridPane grid = new GridPane();
         grid.setVgap(10);
@@ -209,7 +207,6 @@ private void handleAdminChoice(String choice) {
         });
     }
 
-Redi, [5/19/2025 9:45 AM]
 private void viewAllPlanes() {
         List<Plane> planes = loadPlanes();
         ListView<String> listView = new ListView<>();
@@ -302,7 +299,6 @@ private void viewAllPlanes() {
             stage.show();
         }
 
-Redi, [5/19/2025 9:45 AM]
 static void viewProfile(Stage owner) {
             TextInputDialog dialog = new TextInputDialog();
             dialog.setTitle("View Profile");
@@ -375,7 +371,6 @@ static void viewProfile(Stage owner) {
     }
 }
 
-Redi, [5/19/2025 10:02 AM]
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -478,7 +473,7 @@ public class AirplaneDB extends JFrame {
         }
     }
 
-Redi, [5/19/2025 10:02 AM]
+
 private void hostessMenu(ActionEvent e) {
         String password = JOptionPane.showInputDialog(this, "Welcome, Enter Your Password:");
         if (!HOSTESS_PASSWORD.equals(password)) {
@@ -500,7 +495,7 @@ private void hostessMenu(ActionEvent e) {
         }
     }
 
-    // Plane Management Methods
+    
     private void addPlane() {
         String planeId = JOptionPane.showInputDialog(this, "Enter Plane ID:");
         String name = JOptionPane.showInputDialog(this, "Enter Plane Name:");
@@ -556,7 +551,7 @@ private void hostessMenu(ActionEvent e) {
         String sql = "SELECT * FROM planes";
         StringBuilder sb = new StringBuilder();
 
-Redi, [5/19/2025 10:02 AM]
+
 try (Connection conn = DriverManager.getConnection(DB_URL);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -628,7 +623,7 @@ try (Connection conn = DriverManager.getConnection(DB_URL);
             
             String sql = "DELETE FROM hostesses WHERE id = ?";
 
-Redi, [5/19/2025 10:02 AM]
+
 try (Connection conn = DriverManager.getConnection(DB_URL);
                  PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 
@@ -713,9 +708,8 @@ try (Connection conn = DriverManager.getConnection(DB_URL);
     }
 }
 
-Redi, [5/19/2025 5:04 PM]
-case 5: // Base 10 Logarithm
-                    System.out.print("Enter positive number: ");
+
+case 5:  System.out.print("Enter positive number: ");
                     num = scanner.nextDouble();
                     if (num > 0) {
                         System.out.println("log(" + num + ") = " + Math.log10(num));
