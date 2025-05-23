@@ -1,4 +1,4 @@
-Redi, [5/19/2025 9:45 AM]
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -209,7 +209,7 @@ private void handleAdminChoice(String choice) {
         });
     }
 
-Redi, [5/19/2025 9:45 AM]
+
 private void viewAllPlanes() {
         List<Plane> planes = loadPlanes();
         ListView<String> listView = new ListView<>();
@@ -223,7 +223,7 @@ private void viewAllPlanes() {
         stage.show();
     }
 
-    // Helper Methods
+    
     private void showAlert(Alert.AlertType type, String title, String message) {
         Alert alert = new Alert(type);
         alert.setTitle(title);
@@ -267,8 +267,7 @@ private void viewAllPlanes() {
 
     static class HostessManagement {
         static void addHostess(Stage owner) {
-            // Similar detailed dialog implementation as addPlane()
-            // Including validation logic from original code
+           
         }
 
         static void deleteHostess(Stage owner) {
@@ -302,7 +301,7 @@ private void viewAllPlanes() {
             stage.show();
         }
 
-Redi, [5/19/2025 9:45 AM]
+
 static void viewProfile(Stage owner) {
             TextInputDialog dialog = new TextInputDialog();
             dialog.setTitle("View Profile");
@@ -334,7 +333,7 @@ static void viewProfile(Stage owner) {
             alert.showAndWait();
         }
 
-        // File operations similar to Plane management
+   
         private static List<Hostess> loadHostesses() {
             List<Hostess> hostesses = new ArrayList<>();
             try (Scanner scanner = new Scanner(new File(HOSTESS_FILE))) {
@@ -349,7 +348,7 @@ static void viewProfile(Stage owner) {
                     }
                 }
             } catch (FileNotFoundException e) {
-                // File not created yet
+               
             }
             return hostesses;
         }
@@ -367,34 +366,16 @@ static void viewProfile(Stage owner) {
     }
 
     static class Hostess {
-        // Same Hostess class implementation as original
+       
     }
 
     static class Plane {
-        // Same Plane class implementation as original
+      
     }
 }
 
-Redi, [5/19/2025 10:02 AM]
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class AirplaneDB extends JFrame {
-    private static final String DB_URL = "jdbc:sqlite:airplane.db";
-    private static final String ADMIN_PASSWORD = "ET-123Alemayehu";
-    private static final String HOSTESS_PASSWORD = "ET-HostessSchedule";
-    
-    private JButton adminButton, hostessButton, exitButton;
 
-    public AirplaneDB() {
-        initializeDB();
-        setupUI();
-    }
 
     private void initializeDB() {
         try (Connection conn = DriverManager.getConnection(DB_URL);
